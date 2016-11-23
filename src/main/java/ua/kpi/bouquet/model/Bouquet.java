@@ -147,11 +147,6 @@ public class Bouquet {
             if(flower.getStemLength() >= min && flower.getStemLength() <= max) {
                 resultFlowers.add(flower);
             }
-//            if (resultFlowers.size() > 0){
-//                System.out.println(View.FLOWERS_BY_STEM_LENGTH);
-//            } else {
-//                System.out.println(View.NO_MATCHING_FLOWERS);
-//            }
         }
 
         System.out.println(View.FLOWERS_BY_STEM_LENGTH);
