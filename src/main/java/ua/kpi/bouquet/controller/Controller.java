@@ -14,11 +14,6 @@ public class Controller {
 
     // The constants
     public static final int ZERO_VALUE = 0;
-    public static final int FIRST_ITEM = 1;
-    public static final int SECOND_ITEM = 2;
-    public static final int THIRD_ITEM = 3;
-    public static final int FOURTH_ITEM = 4;
-    public static final int FIFTH_ITEM = 5;
 
     /**
      * Reference to model unit of MVC based architecture of program
