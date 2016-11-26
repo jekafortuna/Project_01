@@ -1,13 +1,15 @@
 package ua.kpi.bouquet.model.entities.flower;
 
+import ua.kpi.bouquet.model.EntitiesPrice;
 import ua.kpi.bouquet.view.View;
 
 /**
  * Created on 13. November. 16.
+ * Common parameters for all flowers
  *
  * @author Evgeniy
  */
-public abstract class Flower {
+public abstract class Flower implements EntitiesPrice{
 
     /**
      * Stem length of flower in millimeters
@@ -49,10 +51,12 @@ public abstract class Flower {
         this.freshness = freshness;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
 
+    @Override
     public void setPrice(double price) {
         this.price = price;
     }

@@ -5,6 +5,7 @@ import ua.kpi.bouquet.view.View;
 
 /**
  * Created on 13. November. 16.
+ * Instance of ribbon
  *
  * @author Evgeniy
  */

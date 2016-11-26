@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * Created on 13. November. 16.
+ * This class represents Model unit of MVC based architecture of program
  *
  * @author Evgeniy
  */
@@ -53,7 +54,7 @@ public class Bouquet {
     }
 
     /**
-     * Method for adding accessories to bouquet
+     * Method for adding accessory to bouquet
      * @param accessory that must be added
      */
     public void addAccessory(Accessory accessory) {
@@ -80,7 +81,7 @@ public class Bouquet {
      */
     public Bouquet createBouquet(){
         return new Bouquet(new FlowersCreator().getFlowers(),
-                           new AccessoriesCreator().getAccessories());
+                new AccessoriesCreator().getAccessories());
     }
 
     /**
@@ -137,7 +138,15 @@ public class Bouquet {
      */
     public List<Flower> findFlowersByStemLength(double fromLength, double toLength) {
         List<Flower> resultFlowers = new ArrayList<>();
+
+        /**
+         * min value from both entered - equals to lower border
+         */
         double min = Math.min(fromLength, toLength);
+
+        /**
+         * max value from both entered - equals to high border
+         */
         double max = Math.max(fromLength, toLength);
 
         if (min > max){
@@ -149,9 +158,15 @@ public class Bouquet {
             }
         }
 
-        System.out.println(View.FLOWERS_BY_STEM_LENGTH);
-        for(Flower flower : resultFlowers) {
-            System.out.println(flower);
+        if (resultFlowers.size() <= 0){
+            System.out.println(View.NO_MATCHING_FLOWERS);
+        } else {
+
+            System.out.println(View.FLOWERS_BY_STEM_LENGTH);
+            for (Flower flower : resultFlowers) {
+                System.out.println(flower);
+            }
+
         }
         return resultFlowers;
     }

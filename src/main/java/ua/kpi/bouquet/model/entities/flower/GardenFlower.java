@@ -10,6 +10,9 @@ import ua.kpi.bouquet.view.View;
  */
 public class GardenFlower extends Flower{
 
+    /**
+     * Instance of flower
+     */
     private FlowerName flowerName;
 
     public GardenFlower(int stemLength, int freshness, double price, FlowerName flowerName) {

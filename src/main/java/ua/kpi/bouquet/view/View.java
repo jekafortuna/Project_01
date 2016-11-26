@@ -2,10 +2,12 @@ package ua.kpi.bouquet.view;
 
 /**
  * Created by Evgeniy on 13.11.2016.
+ * This class represents View unit of MVC based architecture of program
  */
 public class View {
 
     // Text's constants
+    public static final String CONSISTENCE = "Bouquet consist of: ";
     public static final String FLOWER_STEM_LENGTH = " with stem length - ";
     public static final String FRESHNESS = ", freshness is ";
     public static final String PART_OF_10 = "/10";

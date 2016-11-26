@@ -1,5 +1,6 @@
 package ua.kpi.bouquet.model.entities.accessory;
 
+import ua.kpi.bouquet.model.EntitiesPrice;
 import ua.kpi.bouquet.model.entities.enums.Color;
 import ua.kpi.bouquet.view.View;
 
@@ -8,7 +9,7 @@ import ua.kpi.bouquet.view.View;
  *
  * @author Evgeniy
  */
-public abstract class Accessory {
+public abstract class Accessory implements EntitiesPrice{
 
     /**
      * Color of accessory
@@ -36,10 +37,12 @@ public abstract class Accessory {
         this.color = color;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
 
+    @Override
     public void setPrice(double price) {
         this.price = price;
     }

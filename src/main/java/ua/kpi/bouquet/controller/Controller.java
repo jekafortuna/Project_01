@@ -20,10 +20,22 @@ public class Controller {
     public static final int FOURTH_ITEM = 4;
     public static final int FIFTH_ITEM = 5;
 
+    /**
+     * Reference to model unit of MVC based architecture of program
+     */
     private Bouquet bouquet;
+
+    /**
+     * Reference to view unit of MVC based architecture of program
+     */
     private View view;
 
-    // Constructor
+    /**
+     * Initiates program's controller unit and set up references to model and view units
+     *
+     * @param bouquet reference to model unit of application
+     * @param view  reference to view unit of application
+     */
     public Controller(Bouquet bouquet, View view) {
         this.bouquet = bouquet;
         this.view = view;
@@ -36,37 +48,47 @@ public class Controller {
         Scanner scanner = new Scanner(System.in);
 
         view.printMessage(View.MAIN_MENU);
-        int menuItem = enterIntValue(scanner);
+//        int menuItem = enterIntValue(scanner);
+
+        view.printMessage(View.CONSISTENCE);
+        bouquet.bouquetConsist();
+        bouquet.getBouquetPrice();
+        bouquet.sortFlowersByFreshness();
+        view.printMessage(View.ENTER_RANGE);
+        bouquet.findFlowersByStemLength(enterPositiveInt(scanner),
+                enterPositiveInt(scanner));
+        view.printMessage(View.FINISH);
+
         /**
          * Menu for user
          */
-        switch (menuItem) {
-            case FIRST_ITEM:                                //print bouquet consist
-                bouquet.bouquetConsist();
-                processUser();
-                break;
-            case SECOND_ITEM:                               //bouquet price
-                bouquet.getBouquetPrice();
-                processUser();
-                break;
-            case THIRD_ITEM:                                //flowers by stem length from range
-                view.printMessage(View.ENTER_RANGE);
-                bouquet.findFlowersByStemLength(enterPositiveInt(scanner),
-                                                enterPositiveInt(scanner));
-                processUser();
-                break;
-            case FOURTH_ITEM:                               //sort by freshness
-                bouquet.sortFlowersByFreshness();
-                processUser();
-                break;
-            case FIFTH_ITEM:                                //end of work
-                view.printMessage(View.FINISH);
-                break;
-            default:
-                view.printMessage(View.WRONG_MENU_ITEM);
-                processUser();
-                break;
-        }
+//        switch (menuItem) {
+//            case FIRST_ITEM:                                //print bouquet consist
+//                bouquet.bouquetConsist();
+//                processUser();
+//                break;
+//            case SECOND_ITEM:                               //bouquet price
+//                bouquet.getBouquetPrice();
+//                processUser();
+//                break;
+//            case THIRD_ITEM:                                //flowers by stem length from range
+//                view.printMessage(View.ENTER_RANGE);
+//                bouquet.findFlowersByStemLength(enterPositiveInt(scanner),
+//                                                enterPositiveInt(scanner));
+//                processUser();
+//                break;
+//            case FOURTH_ITEM:                               //sort by freshness
+//                bouquet.sortFlowersByFreshness();
+//                processUser();
+//                break;
+//            case FIFTH_ITEM:                                //end of work
+//                view.printMessage(View.FINISH);
+//                break;
+//            default:
+//                view.printMessage(View.WRONG_MENU_ITEM);
+//                processUser();
+//                break;
+//        }
     }
 
     /**
