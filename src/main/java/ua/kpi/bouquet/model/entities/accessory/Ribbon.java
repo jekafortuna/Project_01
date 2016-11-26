@@ -37,7 +37,7 @@ public class Ribbon extends Accessory{
 
     @Override
     public String toString() {
-        return View.RIBBON + super.toString() + View.LENGTH +
+        return View.ACCESSORY + View.RIBBON + super.toString() + View.LENGTH +
                 ribbonLength + View.CENTIMETRES ;
     }
 }

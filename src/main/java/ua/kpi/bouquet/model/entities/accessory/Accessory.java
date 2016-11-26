@@ -49,7 +49,6 @@ public abstract class Accessory implements EntitiesPrice{
 
     @Override
     public String toString() {
-        return View.ACCESSORY + View.COLOR + color +
-                View.PRICE + price + View.COINS;
+        return View.COLOR + color + View.PRICE + price + View.COINS;
     }
 }

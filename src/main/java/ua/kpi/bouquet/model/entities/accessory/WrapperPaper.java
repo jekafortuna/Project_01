@@ -52,7 +52,7 @@ public class WrapperPaper extends Accessory{
 
     @Override
     public String toString() {
-        return View.WRAPPER_PAPER + super.toString() +
+        return View.ACCESSORY + View.WRAPPER_PAPER + super.toString() +
                 View.HEIGHT + wrapperHeight + View.CENTIMETRES +
                 View.WIDTH + wrapperWidth + View.CENTIMETRES;
     }

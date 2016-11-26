@@ -95,6 +95,7 @@ public class Bouquet {
         for (Accessory accessory : this.getAccessories()){
             System.out.println(accessory + " ");
         }
+        System.out.println();
     }
 
     /**
@@ -109,7 +110,7 @@ public class Bouquet {
         for(Accessory accessory : accessories) {
             bouquetPrice += accessory.getPrice();
         }
-        System.out.println(View.BOUQUET_PRICE + bouquetPrice + View.COINS);
+        System.out.println(View.BOUQUET_PRICE + bouquetPrice + View.COINS + '\n');
         return bouquetPrice;
     }
 
@@ -128,6 +129,7 @@ public class Bouquet {
         for(Flower flower : flowers) {
             System.out.println(flower);
         }
+        System.out.println();
     }
 
     /**
@@ -161,12 +163,10 @@ public class Bouquet {
         if (resultFlowers.size() <= 0){
             System.out.println(View.NO_MATCHING_FLOWERS);
         } else {
-
             System.out.println(View.FLOWERS_BY_STEM_LENGTH);
             for (Flower flower : resultFlowers) {
                 System.out.println(flower);
             }
-
         }
         return resultFlowers;
     }

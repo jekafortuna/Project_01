@@ -47,69 +47,40 @@ public class Controller {
     public void processUser(){
         Scanner scanner = new Scanner(System.in);
 
-        view.printMessage(View.MAIN_MENU);
-//        int menuItem = enterIntValue(scanner);
+        view.printMessage(View.MAIN_MESSAGE);
 
         view.printMessage(View.CONSISTENCE);
         bouquet.bouquetConsist();
-        bouquet.getBouquetPrice();
-        bouquet.sortFlowersByFreshness();
-        view.printMessage(View.ENTER_RANGE);
-        bouquet.findFlowersByStemLength(enterPositiveInt(scanner),
-                enterPositiveInt(scanner));
-        view.printMessage(View.FINISH);
 
-        /**
-         * Menu for user
-         */
-//        switch (menuItem) {
-//            case FIRST_ITEM:                                //print bouquet consist
-//                bouquet.bouquetConsist();
-//                processUser();
-//                break;
-//            case SECOND_ITEM:                               //bouquet price
-//                bouquet.getBouquetPrice();
-//                processUser();
-//                break;
-//            case THIRD_ITEM:                                //flowers by stem length from range
-//                view.printMessage(View.ENTER_RANGE);
-//                bouquet.findFlowersByStemLength(enterPositiveInt(scanner),
-//                                                enterPositiveInt(scanner));
-//                processUser();
-//                break;
-//            case FOURTH_ITEM:                               //sort by freshness
-//                bouquet.sortFlowersByFreshness();
-//                processUser();
-//                break;
-//            case FIFTH_ITEM:                                //end of work
-//                view.printMessage(View.FINISH);
-//                break;
-//            default:
-//                view.printMessage(View.WRONG_MENU_ITEM);
-//                processUser();
-//                break;
-//        }
+        bouquet.getBouquetPrice();
+
+        bouquet.sortFlowersByFreshness();
+
+        view.printMessage(View.ENTER_RANGE);
+        bouquet.findFlowersByStemLength(enterPositiveInt(scanner), enterPositiveInt(scanner));
+
+        view.printMessage(View.FINISH);
     }
 
     /**
      * Check for correct input menu item
-     * @param sc
+     * @param scanner
      * @return positive number
      */
-    private int enterPositiveInt(Scanner sc) {
-        int positiveInt = enterIntValue(sc);
+    private int enterPositiveInt(Scanner scanner) {
+        int positiveInt = enterIntValue(scanner);
         while (positiveInt < ZERO_VALUE) {
             view.printMessage(View.WRONG_INT);
-            positiveInt = enterIntValue(sc);
+            positiveInt = enterIntValue(scanner);
         }
         return positiveInt;
     }
 
-    private int enterIntValue(Scanner sc) {
-        while( !sc.hasNextInt()) {
+    private int enterIntValue(Scanner scanner) {
+        while( !scanner.hasNextInt()) {
             view.printMessage(View.WRONG_INPUT_DATA);
-            sc.next();
+            scanner.next();
         }
-        return sc.nextInt();
+        return scanner.nextInt();
     }
 }

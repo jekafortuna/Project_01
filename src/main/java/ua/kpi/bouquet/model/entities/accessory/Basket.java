@@ -51,7 +51,7 @@ public class Basket extends Accessory{
 
     @Override
     public String toString() {
-        return View.BASKET + super.toString() + View.DIAMETER +
+        return View.ACCESSORY + View.BASKET + super.toString() + View.DIAMETER +
                 diameter + View.CENTIMETRES + View.HEIGHT +
                 basketHeight + View.CENTIMETRES;
     }
