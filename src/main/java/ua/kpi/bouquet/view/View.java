@@ -34,10 +34,10 @@ public class View {
     public static final String NO_MATCHING_FLOWERS = "Sorry, there are no flowers in bouquet that match those requirements!";
     public static final String WRONG_INT = "Wrong input! Length must be positive! Enter correct INT value";
     public static final String WRONG_INPUT_DATA = "Wrong input! Enter correct INT value";
-    public static final String ENTER_RANGE = "Enter length range in centimeters:";
-    public static final String FINISH = "Good luck! Thanks for attention!";
+    public static final String ENTER_RANGE = "Enter flower's stem length range in centimeters:";
+    public static final String FINISH = "Thanks for attention! Good luck!";
 
-    public static final String MAIN_MESSAGE = "There will execute next actions:\n1.Print consistence of bouquet\n" +
+    public static final String MAIN_MESSAGE = "In this project will execute next actions:\n1.Print consistence of bouquet\n" +
             "2.Count cost of all elements in bouquet\n3.Sort flowers by freshness \n" +
             "4.Get flowers by stem length\n";
 

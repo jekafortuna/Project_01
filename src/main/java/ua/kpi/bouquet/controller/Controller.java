@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 /**
  * Created on 13. November. 16.
+ * This class represents Controller unit of MVC based architecture of program
  *
  * @author Evgeniy
  */

@@ -154,6 +154,14 @@ public class Bouquet {
         if (min > max){
             System.out.println(View.MIN_MAX);
         }
+
+        Collections.sort(flowers, new Comparator<Flower>() {
+            @Override
+            public int compare(Flower flower1, Flower flower2) {
+                return flower2.getStemLength() - flower1.getStemLength();
+            }
+        });
+
         for(Flower flower : flowers) {
             if(flower.getStemLength() >= min && flower.getStemLength() <= max) {
                 resultFlowers.add(flower);
